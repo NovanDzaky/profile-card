@@ -1,104 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HALO CUY</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Silkscreen&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            background-color: white;
-            font-family: 'Noto Sans JP', sans-serif;
-            color: black;
-            font-family: sans-serif;
-        }
-
-        .dark {
-            background-color: black;
-            color: white;
-
-        }
-
-        .txt-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .btn {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            padding: 8px;
-            cursor: pointer;
-            border: none;
-            width: 100%;
-            font-size: 20px;
-        }
-
-        .btn2 {
-            border: none;
-            font-size: 20px;
-        }
-
-        .btn:hover {
-            .btn:hover {
-                background-color: blue;
-                color: black;
-                -ms-transform: rotate(2deg);
-                transform: rotate(2deg);
-                transition: .3s ease-in-out;
-            }
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="google.css">
 </head>
-
 <body>
-    <div class="txt-center">
-        <h3>COBA KLIK INI</h3>
+    <div class="container">
+        <button class="glowing-btn">
+            <span class="glowing-txt">C<span class="faulty-letter">L</span>ICK
+        </button>
     </div>
-    <div class="btn">
-        <button onclick="btnClick()" class="btn">KLIK</button>
-    </div>
-    <div class="btn">
-        <button onclick="btnClick2()" id="HITAM" class="btn2">COBA KLIK AMPE 5 KALI</button>
-    </div>
-
-    <script type="application/javascript">
-
-        let body = document.body;
-        let HITAM = document.getElementById("HITAM");
-
-        const darkLimit = 6;
-        let darkCounter = 0;
-        let darkRemainingLeft;
-
-        function btnClick() {
-            let nama = prompt("nama kamu siapa")
-            if (nama == null) {
-                alert("luwh siapa?????")
-            } 
-            else {
-                alert(`hai senang bertemu dengan anda ${nama}`)
-            }
-        }
-        function btnClick2() {
-            if (darkRemainingLeft == 1) {
-                alert("APA KALIAN MENGHITAMKAN INI")
-                HITAM.style.display = 'none'
-                return
-            }
-
-            darkCounter += 1
-            darkRemainingLeft = darkLimit - darkCounter;
-
-            body.classList.toggle("dark")
-        }
-    </script>
 </body>
 </html>
